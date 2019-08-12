@@ -5,6 +5,7 @@ from urllib.parse import urlparse
 import requests
 
 
+# ------------------------------------------------------------------------------
 def integer_to_roman(number: int):
     value = [
         1000, 900, 500, 400,
@@ -28,7 +29,14 @@ def integer_to_roman(number: int):
     return roman_numeral
 
 
+# ------------------------------------------------------------------------------
 if __name__ == "__main__":
+    # Example usage:
+    # $ python download_range.py --prefix http://ubusound.memoryoftheworld.org/burroughs_william/junky/William-S-Burroughs_Junky_ \
+    #       --postfix \-Junky-<roman>.mp3 \
+    #       --first 1 \
+    #       --last 36 \
+    #       --dest /home/james/audio/burroughs_junky
 
     # parse the command line arguments
     args_parser = argparse.ArgumentParser()
